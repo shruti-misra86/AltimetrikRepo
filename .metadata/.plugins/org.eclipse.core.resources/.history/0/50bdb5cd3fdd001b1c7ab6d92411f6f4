@@ -1,0 +1,23 @@
+package com.example.service;
+
+import java.util.Date;
+import java.util.List;
+
+import com.example.model.Employee;
+
+public interface EmployeeService {
+	public Object saveEmployee(Employee employee);
+
+	public List<Employee> getAllEmployees();
+
+	public Employee getEmployeeById(int id);
+
+	public Object updateEmployee(Employee employee);
+
+	public List<Employee> findAllByBirthDate(Date birthDate);
+
+	public List<Employee> findAllByHireDateBetween(Date currentDate, Date hireDate);
+
+	public List<Employee> findAllWithHireDateBefore(Date hireDate);
+
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="resources"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/Desktop/Altimetrik/HibernateJars/antlr-3.1.1 (1).jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/Desktop/Altimetrik/HibernateJars/antlr-3.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/Desktop/Altimetrik/HibernateJars/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/Desktop/Altimetrik/HibernateJars/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/Desktop/Altimetrik/HibernateJars/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/Desktop/Altimetrik/HibernateJars/hibernate-commons-annotations-4.0.3.final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/Desktop/Altimetrik/HibernateJars/hibernate-core-3.6.3.Final (1).jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/Desktop/Altimetrik/HibernateJars/hibernate-core-3.6.3.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/Desktop/Altimetrik/HibernateJars/hibernate-jpa-2.0-api-1.0.1.Final (2).jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/Desktop/Altimetrik/HibernateJars/javassist-3.12.1.GA.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/Desktop/Altimetrik/HibernateJars/jboss-logging-3.1.0.GA.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/Desktop/Altimetrik/HibernateJars/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/Desktop/Altimetrik/HibernateJars/junit-4.8.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/Desktop/Altimetrik/HibernateJars/log4j-1.2.14.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/Desktop/Altimetrik/HibernateJars/mysql-connector-java-5.0.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/Desktop/Altimetrik/HibernateJars/ojdbc14.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/Desktop/Altimetrik/HibernateJars/slf4j-api-1.5.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/Desktop/Altimetrik/HibernateJars/slf4j-log4j12-1.5.6.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

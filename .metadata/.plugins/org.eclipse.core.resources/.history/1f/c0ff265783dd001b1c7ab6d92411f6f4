@@ -1,0 +1,56 @@
+package com.example.serviceImpl;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.example.model.BankCustomer;
+import com.example.model.Student;
+import com.example.repository.BankCustomerRepo;
+import com.example.repository.StudentRepo;
+import com.example.service.BankCustomerService;
+import com.example.service.StudentService;
+
+@Service
+public class BankCustomerServiceImpl implements BankCustomerService {
+
+	@Autowired
+	private BankCustomerRepo bankCustomerRepo;
+
+	@Override
+	@Transactional
+	public Object saveBankCustomer(BankCustomer bankCustomer) {
+		Map<String, String> map = new HashMap<>();
+		if (bankCustomer.getFirstName().isEmpty()) {
+			map.put("status", "error");
+			map.put("msg", "please enter name");
+		} else {
+			map.put("status", "200");
+			map.put("msg", "success");
+			bankCustomerRepo.save(bankCustomer);
+		}
+		return map;
+	}
+
+	@Override
+	@Transactional
+	public List<BankCustomer> fetchAllBankCustomerDetails() {
+
+		List<BankCustomer> resultList = bankCustomerRepo.fetchAllBankCustomerDetails();
+		for(BankCustomer c:resultList) {
+		BankCustomer bankCustomer = new BankCustomer();
+		bankCustomer.setCustId(c.getCustId());
+		bankCustomer.setFirstName(c.getFirstName());
+		bankCustomer.setLastName(c.getLastName());
+		bankCustomer.setEmail(c.getEmail());
+		bankCustomer.setContact(c.getContact());
+		
+		}
+		
+		return null;
+	}
+}

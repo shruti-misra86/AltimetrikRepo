@@ -1,0 +1,33 @@
+package com.example.dao;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import com.example.model.Customer;
+
+public class CustomerDao {
+	ArrayList<Customer> custList = new ArrayList<Customer>();
+
+	public Object insertCust(Customer customer) {
+		Map<String, String> map = new HashMap<String, String>();
+		if (customer.getCustId() == 0) {
+			map.put("status", "error");
+			map.put("message", "Please enter CustId");
+		} else if (customer.getCustName().isEmpty()) {
+			map.put("status", "error");
+			map.put("message", "Please enter CustName");
+		} else {
+			custList.add(customer);
+			map.put("status", "200");
+			map.put("message", "Data saved success");
+		}
+		return map;
+
+	}
+
+	public ArrayList getCustomers() {
+		return custList;
+	}
+
+}

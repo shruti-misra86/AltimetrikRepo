@@ -1,0 +1,39 @@
+package com.example.serviceImpl;
+
+import java.util.List;
+
+import com.example.model.Employee;
+import com.example.service.EmployeeService;
+
+public class EmployeeServiceImpl implements EmployeeService {
+
+	@Override
+	public Object saveEmployee(Employee employee) {
+
+		return null;
+	}
+
+	@Override
+	public List<Employee> getAllEmployees() {
+
+		return null;
+	}
+
+	@Override
+	public Employee getEmployeeById(int id) {
+
+		return null;
+	}
+
+	@Override
+	public Object updateEmployee(Employee employee) {
+		return null;
+	}
+
+	@Override
+	public List<Employee> getEmployeeByHireDate(Employee employee) {
+
+		return null;
+	}
+
+}

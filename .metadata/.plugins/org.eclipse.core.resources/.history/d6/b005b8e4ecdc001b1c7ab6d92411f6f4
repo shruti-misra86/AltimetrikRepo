@@ -1,0 +1,69 @@
+package com.example.serviceImpl;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.transaction.annotation.Transactional;
+
+import com.example.model.Employee;
+import com.example.repository.EmployeeRepo;
+import com.example.service.EmployeeService;
+
+public class EmployeeServiceImpl implements EmployeeService {
+
+	private EmployeeRepo employeeRepo;
+
+	@Override
+	@Transactional
+	public Object saveEmployee(Employee employee) {
+		Map<String, String> map = new HashMap<>();
+		if (employee.getFirstName().isEmpty()) {
+			map.put("status", "error");
+			map.put("msg", "please enter first name");
+		} else {
+			map.put("status", "200");
+			map.put("msg", "success");
+			employeeRepo.save(employee);
+		}
+		return map;
+
+	}
+
+	@Transactional
+	@Override
+	public List<Employee> getAllEmployees() {
+
+		return employeeRepo.findAll();
+	}
+
+	@Transactional
+	@Override
+	public Employee getEmployeeById(int id) {
+
+		return employeeRepo.findById(id).orElse(null);
+	}
+
+	@Transactional
+	@Override
+	public Object updateEmployee(Employee employee) {
+		Map<String, String> map = new HashMap<>();
+		if (employee.getFirstName().isEmpty()) {
+			map.put("status", "error");
+			map.put("msg", "please enter first name");
+		} else {
+			map.put("status", "200");
+			map.put("msg", "employee successfully updated");
+			employeeRepo.saveAndFlush(employee);
+		}
+		return map;
+	}
+
+	@Transactional
+	@Override
+	public List<Employee> getEmployeeByHireDate(Employee employee) {
+
+		return null;
+	}
+
+}

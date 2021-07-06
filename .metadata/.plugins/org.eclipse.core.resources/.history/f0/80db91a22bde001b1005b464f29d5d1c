@@ -1,0 +1,4 @@
+FROM openjdk:8
+COPY target/DockerDemo.jar docker-demo1.jar
+EXPOSE 8080
+CMD ["java","-jar","docker-demo1.jar"]

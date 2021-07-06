@@ -1,0 +1,15 @@
+server:
+  port: 5050
+
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: studentModule
+        uri: http://localhost:6061/
+        predicates:
+        - Path=/student/**
+      - id: employeeModule
+        uri: http://localhost:6062/
+        predicates:
+        - Path=/employee/**

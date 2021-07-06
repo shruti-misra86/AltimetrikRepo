@@ -1,0 +1,9 @@
+package com.example.model;
+
+public class Customer {
+	private long custId;
+	private String custName;
+	private String address;
+	private double salary;
+
+}
